@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap');
 
-/* 🔹 Configuración General */
+/* Configuración General */
 body {
     height: 100%;
     font-family: 'Poppins','Montserrat', sans-serif;
@@ -8,7 +8,7 @@ body {
     padding: 0;
     background: #f5f5f5;
     color: #333;
-    overflow-x: hidden; /* Previene scroll horizontal en animaciones */
+    overflow-x: hidden; 
 }
 
 h2 {
@@ -18,7 +18,7 @@ h2 {
     animation: fadeIn 1s ease-out;
 }
 
-/* 🔹 Menú de navegación */
+/* Menú de navegación */
 header {
     display: flex;
     justify-content: space-between;
@@ -75,7 +75,7 @@ nav a:hover {
     background-attachment: fixed;
     text-align: center;
     color: white;
-    margin-top: 60px; /* Espacio para el header fijo */
+    margin-top: 60px; 
     animation: fadeIn 1s ease-out;
 }
 
@@ -107,12 +107,12 @@ nav a:hover {
     animation-delay: 0.5s;
 }
 
-/* 🔹 Portafolio */
+/*  Portafolio */
 #portafolio {
     padding: 50px;
 }
 
-/* 🔹 Diseño de las Cards */
+/* Diseño de las Cards */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -231,7 +231,6 @@ nav a:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 🔹 Colores de cada red social */
 .linkedin { background: #333; }
 .instagram { background: #333; }
 .facebook { background: #333; }
@@ -267,7 +266,6 @@ nav a:hover {
     }
 }
 
-/* 🔹 Media Queries Mejorados */
 @media (max-width: 768px) {
     header {
         padding: 15px 20px;
@@ -372,14 +370,14 @@ footer {
 }
 .button-container {
     display: flex;
-    justify-content: center;  /* Alinea los botones horizontalmente */
-    gap: 10px;  /* Espacio entre los botones */
+    justify-content: center; 
+    gap: 10px; 
     margin-top: 10px;
 }
 
 .details {
     display: none;
-    margin-bottom: 10px; /* Para que la info aparezca arriba */
+    margin-bottom: 10px; 
     font-size: 0.9rem;
     color: #555;
     background: #f5f5f5;
@@ -390,7 +388,7 @@ footer {
 
 /* 🔹 Estilos para los botones */
 .btn-info {
-    background: #333; /* Color oscuro */
+    background: #333;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -401,11 +399,11 @@ footer {
 }
 
 .btn-info:hover {
-    background: #222; /* Color más oscuro al pasar el cursor */
+    background: #222; 
 }
 
 .btn-card {
-    background: #333; /* Color oscuro */
+    background: #333; 
     color: white;
     text-decoration: none;
     font-size: 0.9rem;
@@ -419,9 +417,9 @@ footer {
     background: #222;
 }
 
-/* 🔹 Estilos para el botón del menú hamburguesa */
+
 .menu-toggle {
-    display: none; /* Ocultar en escritorio */
+    display: none; 
     background: none;
     border: none;
     color: white;
@@ -432,14 +430,14 @@ footer {
     top: 18px;
 }
 
-/* 🔹 Estilos para el menú en móvil */
+/* Estilos para el menú en móvil */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Mostrar el botón hamburguesa */
+        display: block;
     }
 
     nav ul {
-        display: none; /* Ocultar menú por defecto */
+        display: none; 
         flex-direction: column;
         background: rgba(0, 0, 0, 0.9);
         position: absolute;
@@ -451,7 +449,7 @@ footer {
     }
 
     nav ul.active {
-        display: flex; /* Mostrar cuando esté activo */
+        display: flex; 
     }
 
     nav ul li {

@@ -1,4 +1,4 @@
-// Navbar interactivo con cambio de color al scroll
+
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     header.classList.toggle('scrolled', window.scrollY > 0);
@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(habilidad);
     });
 
-    // Menú hamburguesa para móvil
     const menuBtn = document.querySelector('.menu-btn');
     const nav = document.querySelector('nav');
     
@@ -58,7 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Animación de typing para el texto de presentación
 const typeWriter = (element, text, speed = 50) => {
     let i = 0;
     element.innerHTML = '';
