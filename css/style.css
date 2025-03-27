@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Vinyl&display=swap');
+
+/* 🔹 Configuración General */
+body {
+    height: 100%;
+    font-family: 'Poppins','Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+    overflow-x: hidden; /* Previene scroll horizontal en animaciones */
+}
+
+h2 {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-out;
+}
+
+/* 🔹 Menú de navegación */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0);
+    color: white;
+    padding: 15px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+header .logo {
+    font-family: 'Roboto';
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #f5f5f5;
+}
+
+/* 🔹 Sección INICIO */
+#inicio {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/img/Fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+    margin-top: 60px; /* Espacio para el header fijo */
+    animation: fadeIn 1s ease-out;
+}
+
+/* 🔹 Sección Sobre Mí */
+#sobre-mi {
+    text-align: center;
+    padding: 50px;
+    animation: slideUp 1s ease-out;
+}
+
+#sobre-mi img {
+    border-radius: 100%;
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+#sobre-mi img:hover {
+    transform: scale(1.05);
+}
+
+.parrafo-mio {
+    text-align: justify;
+    margin: 0 60px;
+    font-size: 1.1rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+/* 🔹 Portafolio */
+#portafolio {
+    padding: 50px;
+}
+
+/* 🔹 Diseño de las Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 0 20px;
+    padding: 10px;
+}
+
+.card {
+    width: 25rem;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+.btn-card {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 7px 12px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-card:hover {
+    background: #000;
+}
+
+/* 🔹 Sección Habilidades */
+.habilidades-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.habilidad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.habilidad:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.habilidad i {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.habilidad:hover i {
+    transform: scale(1.1);
+}
+
+/* 🔹 Sección Contacto */
+#contacto {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🔹 Colores de cada red social */
+.linkedin { background: #333; }
+.instagram { background: #333; }
+.facebook { background: #333; }
+.whatsapp { background: #333; }
+.github { background: #333; }
+.gmail { background: #333; }
+
+.icono:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🔹 Media Queries Mejorados */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    #inicio {
+        height: auto;
+        min-height: 20rem;
+        padding: 2rem;
+    }
+
+    #sobre-mi img {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .parrafo-mio {
+        margin: 0 20px;
+        font-size: 1rem;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .habilidades-container {
+        gap: 10px;
+    }
+
+    .habilidad {
+        width: calc(33.33% - 20px);
+    }
+
+    .redes-sociales {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        font-size: 20px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .habilidad {
+        width: calc(50% - 20px);
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+}
+footer {
+    height: 6rem;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.details {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.btn-info {
+    background: #105a99;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    display: block;
+}
+
+.btn-info:hover {
+    background: #0a4376;
+}
+.button-container {
+    display: flex;
+    justify-content: center;  /* Alinea los botones horizontalmente */
+    gap: 10px;  /* Espacio entre los botones */
+    margin-top: 10px;
+}
+
+.details {
+    display: none;
+    margin-bottom: 10px; /* Para que la info aparezca arriba */
+    font-size: 0.9rem;
+    color: #555;
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* 🔹 Estilos para los botones */
+.btn-info {
+    background: #333; /* Color oscuro */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    display: block;
+}
+
+.btn-info:hover {
+    background: #222; /* Color más oscuro al pasar el cursor */
+}
+
+.btn-card {
+    background: #333; /* Color oscuro */
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-card:hover {
+    background: #222;
+}
+
+/* 🔹 Estilos para el botón del menú hamburguesa */
+.menu-toggle {
+    display: none; /* Ocultar en escritorio */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 18px;
+}
+
+/* 🔹 Estilos para el menú en móvil */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostrar el botón hamburguesa */
+    }
+
+    nav ul {
+        display: none; /* Ocultar menú por defecto */
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex; /* Mostrar cuando esté activo */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}

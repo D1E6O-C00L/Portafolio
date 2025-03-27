@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/img/icon.png">
+    <script defer src="/js/index.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 🔹 MENÚ DE NAVEGACIÓN -->
+    <header>
+        <div class="logo">Mi Portafolio</div>
+        
+        <!-- 🔹 Menú Hamburguesa (oculto en pantallas grandes) -->
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#portafolio">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- 🔹 SECCIÓN INICIO -->
+    <section id="inicio">
+        <div id="sobre-mi">
+            <img src="img/Diego.jpeg" alt="Tu foto">
+            <h1>¡Hola! Soy Diego Enrique Cool Dzul</h1>
+            <p>Estudiante apasionado por la tecnología, el diseño y la creatividad.</p>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+     <section>
+        <h2>Sobre mi</h2>
+        <div class="parrafo-mio">
+        <p>Soy un estudiante de la Universidad Politécnica de Quintana Roo, con un profundo interés en el diseño web y el desarrollo de experiencias digitales atractivas e intuitivas. Actualmente, me encuentro en la etapa final de mi carrera, uno de mis principales objetivos es mejorar mis competencias en JavaScript y PHP, dos tecnologías clave en la creación de aplicaciones web dinámicas y eficientes. Cada proyecto en el que trabajo representa una oportunidad para innovar, optimizar procesos y superar mis propios límites.</p>
+        <p style="font-style: italic; font-size: 18px; color: #333;">
+            Haz las cosas como si nunca pudieras cometer un error, pero no te sorprendas cuando lo hagas.
+        </p>
+        
+        </div>
+     </section>
+
+    <!-- 🔹 SECCIÓN HABILIDADES -->
+    <section id="habilidades">
+        <h2>Tecnologías & Herramientas</h2>
+        <div class="habilidades-container">
+            <div class="habilidad">
+                <i class="fab fa-react"></i>
+                <p>React</p>
+            </div>
+            <div class="habilidad">
+                <i class="fab fa-js"></i>
+                <p>JavaScript</p>
+            </div>
+            <div class="habilidad">
+                <i class="fab fa-html5"></i>
+                <p>HTML</p>
+            </div>
+            <div class="habilidad">
+                <i class="fab fa-css3-alt"></i>
+                <p>CSS</p>
+            </div>
+            <div class="habilidad">
+                <i class="fas fa-database"></i>
+                <p>SQL</p>
+            </div>
+            <div class="habilidad">
+                <i class="fa-brands fa-figma"></i>
+                <p>Figma</p>
+            </div>
+        </div>
+    </section>
+
+<!-- 🔹 SECCIÓN PROYECTOS -->
+<section id="portafolio">
+    <h2>Mis Proyectos</h2>
+    <div class="card-container">
+        
+        <!-- Peer Tutor -->
+        <div class="card">
+            <img src="/img/PeerTutor.png" alt="Proyecto 1">
+            <h3>Peer Tutor</h3>
+            <p>Desarrollé la interfaz frontend de esta plataforma de tutorías en línea, facilitando la conexión entre estudiantes y tutores.</p>
+
+            <div id="details-peer" class="details">
+                <p>Peer Tutor es una plataforma que permite gestionar tutorías impartidas por los alumnos y registrar a quienes desean ofrecer tutorías.</p>
+            </div>
+
+            <div class="button-container">
+                <button class="btn-card btn-info" onclick="toggleDetails('details-peer')">Más información</button>
+                <a href="https://github.com/UpqrooCool/PeerTutor" class="btn-card" target="_blank">Ver Repositorio</a>
+            </div>
+        </div>
+
+        <!-- Proyecteca -->
+        <div class="card">
+            <img src="img/Proyecteca.png" alt="Proyecto 2">
+            <h3>Proyecteca</h3>
+            <p>Colaboré en el desarrollo frontend dentro de una rama en Git, mejorando la interfaz y experiencia de usuario.</p>
+
+            <div id="details-proyecteca" class="details">
+                <p>Proyecteca es un repositorio de proyectos para la UPQROO, donde los alumnos pueden subir únicamente archivos PDF para compartir sus investigaciones y trabajos académicos.</p>
+            </div>
+
+            <div class="button-container">
+                <button class="btn-card btn-info" onclick="toggleDetails('details-proyecteca')">Más información</button>
+                <a href="https://github.com/AlbertoCastre/Proyecteca" class="btn-card" target="_blank">Ver Repositorio</a>
+            </div>
+        </div>
+
+        <!-- UniWeb -->
+        <div class="card">
+            <img src="img/UniWeb.png" alt="Proyecto 3">
+            <h3>UniWeb</h3>
+            <p>Diseño conceptual de una plataforma web, representado en Figma con una interfaz moderna y atractiva.</p>
+
+            <div id="details-uniweb" class="details">
+                <p>UniWeb es una página diseñada para la materia de UI/UX. Ayuda a futuros estudiantes a encontrar información sobre universidades, rutas de camión, carreras y cuenta con un examen vocacional.</p>
+            </div>
+
+            <div class="button-container">
+                <button class="btn-card btn-info" onclick="toggleDetails('details-uniweb')">Más información</button>
+                <a href="https://www.figma.com/design/DEnMxTKBdw3mmiz6orKCaQ/UniWeb%2C?node-id=0-1&t=gAGWYGwtmhIeiJwR-1" class="btn-card" target="_blank">Ver Repositorio</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    
+
+     <!-- 🔹 SECCIÓN CONTACTO -->
+<section id="contacto">
+    <h2>Contacto</h2>
+    <p>¡Hablemos! Envíame un mensaje.</p>
+    
+    <div class="redes-sociales">
+        <a href="https://www.linkedin.com/in/cool-dzul-diego-enrique-77055a290/" target="_blank" class="icono linkedin">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/diegoo_ecd/" target="_blank" class="icono instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/diego.cooldzul" target="_blank" class="icono facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://wa.me/9984195237" target="_blank" class="icono whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://github.com/UpqrooCool" target="_blank" class="icono github">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:diegocool029@gmail.com" class="icono gmail">
+            <i class="fas fa-envelope"></i>
+        </a>        
+        </a>
+    </div>
+    </section>  
+
+    <!-- 🔹 PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2025 Mi Portafolio - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
